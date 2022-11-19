@@ -1,0 +1,23 @@
+package com.kt.regEx;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegExDemo {
+
+public static void main(String args[]){
+
+             int   count=0;   //to count how many itertions
+			 
+           Pattern p = Pattern.compile("ab");    //pattern/Re
+		   
+		   Matcher m= p.matcher("ababbabab");
+		   
+		   while(m.find())
+		   {
+		      count++;
+		   System.out.println(m.start());
+		   }
+		   System.out.println("The number of occurences are:"+count);
+}
+}
